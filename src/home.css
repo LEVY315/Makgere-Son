@@ -1,0 +1,175 @@
+/* Reset and global styles */
+body,
+html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Navigation styles */
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #666262;
+}
+
+.welcome-message {
+  color: white;
+  font-weight: bold;
+}
+
+/* Main content styles */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: white;
+}
+
+.container h1 {
+  font-size: calc(20vw / 3);
+  margin: 0;
+}
+
+.container h3 {
+  font-size: calc(10vw / 3);
+  color: red;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.mySlides {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  transition: opacity 2.5s, transform 2.5s;
+}
+
+.mySlides.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mySlides img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+/* Fading animation for slides */
+.fade {
+  transform: translateX(100%);
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  z-index: 2;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots/Indicators */
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Footer styles */
+footer {
+  background-color: rgba(4, 4, 4, 0.7);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+footer .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  margin-left: 5px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <script src="Functions.js"></script>
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <div class="slideshow-container">
+      <!-- Slides -->
+      <div class="mySlides fade">
+        <img
+          src="imges/Building-Construction-Process-From-Start-To-Finish.jpg"
+          alt="Slide 1"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="imges/Under-Construction Projects_ Pros and Cons of Buying an Under-Construction Property.png"
+          alt="Slide 2"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="imges/Understanding-Construction-Law-and-Built-Environment-Law-in-South-Africa-scaled.jpg"
+          alt="Slide 3"
+        />
+      </div>
+
+      <!-- Navigation buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <nav>
+      <ul>
+        <li class="welcome-message">
+          Makgere & Sons contractors and consultants
+        </li>
+        <li>
+          <a href="#home" onclick="Home()">
+            <i class="fas fa-home home-icon"></i> Home
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Dots/Indicators -->
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Makgere & Sons is a leading construction and consulting firm dedicated
+        to delivering top-notch services in the industry. With decades of
+        experience, we specialize in a wide range of construction projects, from
+        residential buildings to large-scale commercial developments. Our
+        commitment to quality and excellence ensures that every project is
+        completed to the highest standards, meeting the unique needs and
+        expectations of our clients. Our team of professionals is passionate
+        about innovation and sustainability, making us a trusted partner in
+        building a better future.
+      </p>
+    </section>
+
+    <footer>
+      JIM MASHILO <span class="dot"></span> TEL NO:076 205 2848/074 297 2294
+      <span class="dot"></span> EMAIL:mashilo.ce@gmail.com
+    </footer>
+    <!-- <audio controls autoplay>
+      <source
+        src="imges/saxo_feat._mdu_aka_trp_mp3_68964.mp3"
+        type="audio/mpeg"
+      />
+    </audio> -->
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].className = slides[i].className.replace(" active", "");
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].className += " active";
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3500); // Change image every 3.5 seconds
+      }
+    </script>
+  </body>
+</html>
